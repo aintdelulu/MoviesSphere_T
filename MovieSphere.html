@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <title>Hive Hotel</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures footer stays at bottom */
+            margin: 0; /* Remove default margin */
+        }
+        main {
+            flex: 1; /* Takes up remaining space */
+            padding-bottom: 2rem; /* Ensure some space above the footer */
+        }
+        .video-background {
+            position: absolute; /* Ensure video is behind content */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Keep video behind other elements */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="MovieSphereBG.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <style>
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-gradient {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+        }
+        .btn-shadow {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+        .btn-shadow:hover {
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+        }
+        .btn-animated {
+            background-color: #007bff;
+            color: white;
+            transition: transform 0.2s;
+        }
+        .btn-animated:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with Navigation -->
+<header class="d-flex justify-content-between align-items-center p-3" style="background-color: #2c2c2c; color: #f0e68c; border-bottom: 5px solid #8b4513;">
+    <div class="d-flex align-items-center">
+        <div class="logo">
+            <img src="MovieSphere Logo.jpg" alt="Logo" class="logo-img" style="height: 80px;">
+        </div>
+        <div class="ms-3">
+            <h1 class="m-0" style="font-family: 'Garamond', serif; font-size: 2.5rem; color: #ec9556ab; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                MovieSphere
+            </h1>
+        </div>
+    </div>
+    <nav class="d-flex">
+        <a href="#" class="nav-link text-faded me-3" style="font-size: 1.2rem;">About</a>
+        <a href="#" class="nav-link text-faded me-3" style="font-size: 1.2rem;">Features</a>
+        <a href="#" class="nav-link text-faded" style="font-size: 1.2rem;">Contact Us</a>
+        <!-- Styled Button -->
+        <button type="button" class="btn btn-vintage ml-2 rounded-pill px-4" data-toggle="modal" data-target="#authModal" style="font-size: 1.1rem;">
+            Sign In / Sign Up
+        </button>
+    </nav>
+</header>
+
+<style>
+    /* Vintage styles for header */
+    .nav-link {
+        font-family: 'Garamond', serif; /* Classic font for vintage feel */
+        color: #f0e68c; /* Light color for text */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+        color: #d2b48c; /* Tan color on hover */
+    }
+
+    .btn-vintage {
+        background: linear-gradient(135deg, #8b4513, #d2b48c); /* Vintage gradient */
+        color: #fff; /* White text */
+        border: none; /* No border */
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-vintage:hover {
+        background: linear-gradient(135deg, #d2b48c, #8b4513); /* Reverse gradient on hover */
+        transform: scale(1.05); /* Slight scale effect on hover */
+    }
+
+    /* Additional styles for logo */
+    .logo-img {
+        filter: grayscale(100%); /* Grayscale for a vintage effect */
+        transition: filter 0.3s;
+    }
+
+    .logo-img:hover {
+        filter: grayscale(0); /* Color on hover */
+    }
+
+    /* Faded text color */
+    .text-faded {
+        color: #e0e0e0; /* Light gray for faded look */
+    }
+</style>
+
+
+
+
+<style>
+    html, body {
+        font-family: Arial, sans-serif;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensures footer stays at the bottom */
+        margin: 0; /* Remove default margin */
+    }
+    main {
+        flex: 1; /* Takes up remaining space */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        color: white;
+    }
+    footer {
+        background-color: #222;
+        color: #fce305;
+        text-align: center;
+        padding: 20px;
+        border-top: 5px solid #8b4513;
+    }
+    .modal-body {
+        background-color: #f8f9fa; /* Light background for modals */
+    }
+    .text-dark {
+        color: #343a40; /* Dark text color for better contrast */
+    }
+</style>
+</head>
+<body>
+<!-- Your existing video background here -->
+<video autoplay muted loop class="video-background">
+    <source src="MovieSphereBG.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
+<main class="text-center mt-5" style="background: rgba(0, 0, 0, 0.7); padding: 2rem; border-radius: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <h1 class="text-white display-4" id="typing-effect" style="font-family: 'Poppins', sans-serif; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+        Welcome to MovieSphere
+    </h1>
+    <div class="text-white" style="text-align: center;">
+        <div style="font-family: 'Roboto', sans-serif; font-size: 1.2rem; margin: 1rem 0; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+            Your gateway to the latest films and unforgettable experiences!
+        </div>
+    </div>
+    <button class="buy-your-ticket-btn" style="background-color: #d8c9a3; color: #5a3e30; border: 1px solid #5a3e30; border-radius: 5px; padding: 5px 15px; font-family: 'Poppins', sans-serif; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;">
+        Buy Your Ticket
+    </button>
+</main>
+
+
+
+
+
+
+<!-- Sign In and Sign Up Modals -->
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: #d2b48c; color: #3b2e2e;">
+            <div class="modal-header" style="background-color: #8b5a2b; color: #f5f5dc;">
+                <h5 class="modal-title" id="authModalLabel">Sign In / Sign Up</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" style="color: #f5f5dc;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="background-color: #f5f5dc; color: #3b2e2e;">
+                <ul class="nav nav-tabs" id="authTab" role="tablist" style="border-bottom: 2px solid #8b5a2b;">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="signInTab" data-toggle="tab" href="#signIn" role="tab" aria-controls="signIn" aria-selected="true" style="color: #8b5a2b;">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="signUpTab" data-toggle="tab" href="#signUp" role="tab" aria-controls="signUp" aria-selected="false" style="color: #8b5a2b;">Sign Up</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="authTabContent">
+                    <!-- Sign In Form -->
+                    <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signInTab">
+                        <form>
+                            <div class="form-group">
+                                <label for="signInEmail" style="color: #3b2e2e;">Email Address</label>
+                                <input type="email" class="form-control" id="signInEmail" required style="background-color: #e9d6c5; border: 1px solid #8b5a2b;">
+                            </div>
+                            <div class="form-group">
+                                <label for="signInPassword" style="color: #3b2e2e;">Password</label>
+                                <input type="password" class="form-control" id="signInPassword" required style="background-color: #e9d6c5; border: 1px solid #8b5a2b;">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe" style="color: #3b2e2e;">Remember Me</label>
+                            </div>
+                            <a href="#" class="text-primary">Forgot Password?</a>
+                        </form>
+                        <div class="social-signin text-center mb-2" style="margin-top: 1rem;">
+                            <p style="color: #3b2e2e;">Or sign in with:</p>
+                            <button class="btn btn-danger btn-sm mx-1" style="border-radius: 5px;">
+                                <i class="fab fa-google"></i> Sign in with Google
+                            </button>
+                            <button class="btn btn-primary btn-sm mx-1" style="border-radius: 5px;">
+                                <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Sign Up Form -->
+                    <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUpTab">
+                        <form>
+                            <div class="form-group">
+                                <label for="fullName" style="color: #3b2e2e;">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" required style="background-color: #e9d6c5; border: 1px solid #8b5a2b;">
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpEmail" style="color: #3b2e2e;">Email Address</label>
+                                <input type="email" class="form-control" id="signUpEmail" required style="background-color: #e9d6c5; border: 1px solid #8b5a2b;">
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpPassword" style="color: #3b2e2e;">Password</label>
+                                <input type="password" class="form-control" id="signUpPassword" required style="background-color: #e9d6c5; border: 1px solid #8b5a2b;">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword" style="color: #3b2e2e;">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" required style="background-color: #e9d6c5; border: 1px solid #8b5a2b;">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck" style="color: #3b2e2e;">I agree to the Terms & Conditions</label>
+                            </div>
+                        </form>
+                        <div class="social-signup text-center mb-2" style="margin-top: 1rem;">
+                            <p style="color: #3b2e2e;">Or sign up with:</p>
+                            <button class="btn btn-danger btn-sm mx-1" style="border-radius: 5px;">
+                                <i class="fab fa-google"></i> Sign up with Google
+                            </button>
+                            <button class="btn btn-primary btn-sm mx-1" style="border-radius: 5px;">
+                                <i class="fab fa-facebook-f"></i> Sign up with Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center" style="background-color: #8b5a2b; color: #f5f5dc;">
+                <button type="button" class="btn btn-primary mx-2" id="submitSignIn" style="border-radius: 5px;">Sign In</button>
+                <button type="button" class="btn btn-success mx-2" id="submitSignUp" style="border-radius: 5px;">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Main Section -->
+<style>
+    /* Basic reset for body */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure the body takes up the full height */
+        background-color: #f8f9fa; /* Light background for the whole page */
+    }
+
+    /* Content area styles */
+    .content {
+        flex: 1; /* Allows the content area to grow and fill available space */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        text-align: center; /* Center text */
+    }
+
+    /* Main area styles */
+    main {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        border-radius: 10px;
+        color: white; /* Text color */
+        margin: 20px; /* Space around main */
+    }
+
+    /* Footer is fixed at the bottom */
+    footer {
+        background-color: #222;
+        color: #fce305;
+        width: 100%;
+        border-top: 5px solid #8b4513;
+        font-family: 'Garamond', serif;
+        position: relative;
+        bottom: 0;
+        padding: 1rem 0;
+    }
+</style>
+
+<!-- Footer -->
+<footer class="text-center mt-5 p-4">
+    <div class="container-fluid" style="max-width: 1200px; margin: 0 auto; padding: 0;">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Links Section -->
+            <div class="mb-3 mb-md-0">
+                <a href="#" class="text-faded me-3 footer-link" aria-label="Privacy Policy">
+                    <i class="fas fa-shield-alt"></i> Privacy Policy
+                </a>
+                <span class="text-faded">|</span>
+                <a href="#" class="text-faded mx-3 footer-link" aria-label="Terms of Service">
+                    <i class="fas fa-file-contract"></i> Terms of Service
+                </a>
+                <span class="text-faded">|</span>
+                <a href="#" class="text-faded ms-3 footer-link" aria-label="FAQs">
+                    <i class="fas fa-question-circle"></i> FAQs
+                </a>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="mb-3 mb-md-0">
+                <span class="text-faded">Follow us:</span>
+                <a href="#" class="text-faded ms-3 footer-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-faded ms-3 footer-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-faded ms-3 footer-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <!-- Contact Section -->
+            <div>
+                <a href="mailto:MovieSphere@gmail.com" class="text-faded me-3 footer-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i> MovieSphere@gmail.com
+                </a>
+                <span class="text-faded">|</span>
+                <a href="tel:+639175813189" class="text-faded ms-3 footer-link" aria-label="Phone">
+                    <i class="fas fa-phone-alt"></i> (+63) 94464466548
+                </a>
+            </div>
+        </div>
+        <div class="mt-3">
+            <p class="text-faded" style="font-size: 10px;">&copy; 2024 MovieSphere. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+       const text = "Find, Watch, Learn and Enjoy!";
+
+        let index = 0;
+    
+        function typeText() {
+            if (index < text.length) {
+                document.getElementById("typing-effect").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeText, 50); // Adjust speed here (in milliseconds)
+            }
+        }
+    
+        window.onload = typeText; // Start typing effect on page load
+    </script>
+
+    
+    
+</body>
+</html>
