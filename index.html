@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
     <title>MovieSphere</title>
     <style>
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures footer stays at bottom */
-            margin: 0; /* Remove default margin */
+            min-height: 100vh; 
+            margin: 0; 
         }
         main {
-            flex: 1; /* Takes up remaining space */
-            padding-bottom: 2rem; /* Ensure some space above the footer */
+            flex: 1; 
+            padding-bottom: 2rem; 
         }
         .video-background {
-            position: fixed; /* Ensure video is behind content */
+            position: fixed; 
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Keep video behind other elements */
+            z-index: -1; 
         }
     </style>
 </head>
 <body>
-<!-- Header with Navigation -->
+
 <header class="d-flex justify-content-between align-items-center p-3" style="background-color: #2c2c2c; color: #f0e68c; border-bottom: 5px solid #8b4513;">
     <div class="d-flex align-items-center">
         <div class="logo">
@@ -47,7 +47,7 @@
         <a href="#" class="nav-link text-faded me-3" style="font-size: 1.2rem;">About</a>
         <a href="#" class="nav-link text-faded me-3" style="font-size: 1.2rem;">Features</a>
         <a href="#" class="nav-link text-faded" style="font-size: 1.2rem;">Contact Us</a>
-        <!-- Styled Button -->
+        
         <button type="button" class="btn btn-vintage ml-2 rounded-pill px-4" data-toggle="modal" data-target="#authModal" style="font-size: 1.1rem;">
             Sign In / Sign Up
         </button>
@@ -57,62 +57,62 @@
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures footer stays at bottom */
-            margin: 0; /* Remove default margin */
+            min-height: 100vh; 
+            margin: 0; 
         }
         main {
-            flex: 1; /* Takes up remaining space */
-            padding-bottom: 2rem; /* Ensure some space above the footer */
+            flex: 1; 
+            padding-bottom: 2rem; 
         }
         .video-background {
-            position: absolute; /* Ensure video is behind content */
+            position: absolute; 
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Keep video behind other elements */
+            z-index: -1; 
         }
     </style>
 
 <style>
-    /* Vintage styles for header */
+    
     .nav-link {
-        font-family: 'Garamond', serif; /* Classic font for vintage feel */
-        color: #f0e68c; /* Light color for text */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        font-family: 'Garamond', serif; 
+        color: #f0e68c; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
         transition: color 0.3s;
     }
 
     .nav-link:hover {
-        color: #d2b48c; /* Tan color on hover */
+        color: #d2b48c; 
     }
 
     .btn-vintage {
-        background: linear-gradient(135deg, #8b4513, #d2b48c); /* Vintage gradient */
-        color: #fff; /* White text */
-        border: none; /* No border */
+        background: linear-gradient(135deg, #8b4513, #d2b48c); 
+        color: #fff;
+        border: none; 
         transition: background 0.3s, transform 0.2s;
     }
 
     .btn-vintage:hover {
-        background: linear-gradient(135deg, #d2b48c, #8b4513); /* Reverse gradient on hover */
-        transform: scale(1.05); /* Slight scale effect on hover */
+        background: linear-gradient(135deg, #d2b48c, #8b4513); 
+        transform: scale(1.05); 
     }
 
-    /* Additional styles for logo */
+    
     .logo-img {
-        filter: grayscale(100%); /* Grayscale for a vintage effect */
+        filter: grayscale(100%); 
         transition: filter 0.3s;
     }
 
     .logo-img:hover {
-        filter: grayscale(0); /* Color on hover */
+        filter: grayscale(0); 
     }
 
-    /* Faded text color */
+    
     .text-faded {
-        color: #e0e0e0; /* Light gray for faded look */
+        color: #e0e0e0; 
     }
 </style>
 
@@ -122,7 +122,7 @@
 <style>
    
     main {
-        flex: 1; /* Takes up remaining space */
+        flex: 1; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -139,15 +139,15 @@
         border-top: 5px solid #8b4513;
     }
     .modal-body {
-        background-color: #f8f9fa; /* Light background for modals */
+        background-color: #f8f9fa; 
     }
     .text-dark {
-        color: #343a40; /* Dark text color for better contrast */
+        color: #343a40; 
     }
 </style>
 </head>
 <body>
-<!-- Your existing video background here -->
+
 <video autoplay muted loop class="video-background">
     <source src="MovieSphereBG.mp4" type="video/mp4">
 </video>
@@ -172,7 +172,7 @@
 
 
 
-<!-- Sign In and Sign Up Modals -->
+
 <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="background-color: #d2b48c; color: #3b2e2e;">
@@ -192,7 +192,7 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="authTabContent">
-                    <!-- Sign In Form -->
+                    
                     <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signInTab">
                         <form>
                             <div class="form-group">
@@ -219,7 +219,7 @@
                             </button>
                         </div>
                     </div>
-                    <!-- Sign Up Form -->
+                    
                     <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUpTab">
                         <form>
                             <div class="form-group">
@@ -265,35 +265,35 @@
 
 
 
-<!-- Main Section -->
+
 <style>
-    /* Basic reset for body */
+    
     body {
         display: flex;
         flex-direction: column;
-        min-height: 100vh; /* Ensure the body takes up the full height */
-        background-color: #f8f9fa; /* Light background for the whole page */
+        min-height: 100vh; 
+        background-color: #f8f9fa; 
     }
 
-    /* Content area styles */
+    
     .content {
-        flex: 1; /* Allows the content area to grow and fill available space */
+        flex: 1; 
         display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        text-align: center; /* Center text */
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
     }
 
-    /* Main area styles */
+    
     main {
         background: rgba(0, 0, 0, 0.7);
         padding: 2rem;
         border-radius: 10px;
-        color: white; /* Text color */
-        margin: 20px; /* Space around main */
+        color: white; 
+        margin: 20px; 
     }
 
-    /* Footer is fixed at the bottom */
+    
     footer {
         background-color: #222;
         color: #fce305;
@@ -305,11 +305,11 @@
         padding: 1rem 0;
     }
     </style>
-<!-- Footer -->
+
 <footer class="text-center mt-5 p-4">
     <div class="container-fluid" style="max-width: 1200px; margin: 0 auto; padding: 0;">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <!-- Links Section -->
+            
             <div class="mb-3 mb-md-0">
                 <a href="#" class="text-faded me-3 footer-link" aria-label="Privacy Policy">
                     <i class="fas fa-shield-alt"></i> Privacy Policy
@@ -324,7 +324,7 @@
                 </a>
             </div>
 
-            <!-- Social Media Section -->
+            
             <div class="mb-3 mb-md-0">
                 <span class="text-faded">Follow us:</span>
                 <a href="#" class="text-faded ms-3 footer-icon" aria-label="Facebook">
@@ -339,7 +339,7 @@
                 <p class="text-faded" style="font-size: 16px;">&copy; 2024 MovieSphere. All rights reserved.</p>
             </div>
 
-            <!-- Contact Section -->
+            
             <div>
                 <a href="mailto:MovieSphere@gmail.com" class="text-faded me-3 footer-link" aria-label="Email">
                     <i class="fas fa-envelope"></i> MovieSphere@gmail.com
@@ -368,11 +368,11 @@
             if (index < text.length) {
                 document.getElementById("typing-effect").innerHTML += text.charAt(index);
                 index++;
-                setTimeout(typeText, 50); // Adjust speed here (in milliseconds)
+                setTimeout(typeText, 50); 
             }
         }
     
-        window.onload = typeText; // Start typing effect on page load
+        window.onload = typeText; 
     </script>
 
     
